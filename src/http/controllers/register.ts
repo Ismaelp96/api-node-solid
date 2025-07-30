@@ -2,7 +2,7 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
 
 import { RegisterUserCase } from "@/use-cases/register";
-import { PrismaUsersRepository } from "@/repositories/prisma-users-repository";
+import { PrismaUsersRepository } from "@/repositories/prisma/prisma-users-repository";
 
 export async function register(req: FastifyRequest, reply: FastifyReply) {
   const registerBodySchema = z.object({
