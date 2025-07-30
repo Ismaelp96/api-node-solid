@@ -9,7 +9,9 @@
     "start": "node build/server.js",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
-    "lint:eslint:check": "eslint ."
+    "lint:eslint:check": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +25,9 @@
     "tsup": "8.5.0",
     "tsx": "4.20.3",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.38.0"
+    "typescript-eslint": "8.38.0",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.2.4"
   },
   "dependencies": {
     "@prisma/client": "6.13.0",
