@@ -11,7 +11,8 @@
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "9.32.0",
     "@types/node": "24.1.0",
+    "@vitest/coverage-v8": "3.2.4",
     "eslint": "9.32.0",
     "prettier": "3.6.2",
     "prisma": "6.13.0",
