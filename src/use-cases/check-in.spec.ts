@@ -34,7 +34,7 @@ describe("Check in Use Case", () => {
       gymId: "gym-01",
     });
 
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: "user-01",
         gymId: "gym-01",
