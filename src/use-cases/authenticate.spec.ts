@@ -1,7 +1,8 @@
+import { hash } from "bcryptjs";
 import { expect, describe, it, beforeEach } from "vitest";
+
 import { InMemoryUserRepository } from "@/repositories/in-memory/in-memory-users-repository";
 import { AuthenticateUseCase } from "./authenticate";
-import { hash } from "bcryptjs";
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error";
 
 let userRepository: InMemoryUserRepository;
