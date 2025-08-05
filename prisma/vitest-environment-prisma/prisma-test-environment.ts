@@ -20,7 +20,6 @@ export default <Environment>{
   async setup() {
     const schema = randomUUID();
     const databaseUrl = generateDatabaseUrl(schema);
-    console.log(`🧪 Criando DB com schema: ${schema}`);
     process.env.DATABASE_URL = databaseUrl;
     execSync("npx prisma db push");
     return {
@@ -29,7 +28,6 @@ export default <Environment>{
           `DROP SCHEMA IF EXISTS "${schema}" CASCADE`,
         );
         await prisma.$disconnect();
-        console.log(`🧹 Schema ${schema} apagado.`);
       },
     };
   },
