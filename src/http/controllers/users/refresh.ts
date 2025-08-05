@@ -5,20 +5,22 @@ export async function refresh(req: FastifyRequest, reply: FastifyReply) {
     onlyCookie: true,
   });
 
+  const { role, sub } = req.user;
+
   const token = await reply.jwtSign(
-    {},
+    { role },
     {
       sign: {
-        sub: req.user.sub,
+        sub,
       },
     },
   );
 
   const refreshToken = await reply.jwtSign(
-    {},
+    { role },
     {
       sign: {
-        sub: req.user.sub,
+        sub: sub,
         expiresIn: "7d",
       },
     },
